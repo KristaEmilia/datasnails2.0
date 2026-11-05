@@ -177,8 +177,8 @@ app.title = 'Tampere Data Dashboard'
 app.layout = html.Div([
     html.Div(
         html.H1('Tampere Data Dashboard',
-                style={'font-family': FONT['family'], 'color': '#444342', 'font-size': '24px', 'margin': '5px 0'}),
-        style={'background-color': '#DDDDDD', 'padding': '5px 10px'},
+                style={'fontFamily': FONT['family'], 'color': '#444342', 'fontSize': '24px', 'margin': '5px 0'}),
+        style={'backgroundColor': '#DDDDDD', 'padding': '5px 10px'},
     ),
 
     html.Div([
@@ -193,7 +193,7 @@ app.layout = html.Div([
                 value='general',
                 clearable=False,
             ),
-        ], style={'flex': '1', 'min-width': '250px'}),
+        ], style={'flex': '1', 'minWidth': '250px'}),
         html.Div([
             html.Label('Postal code area'),
             dcc.Dropdown(
@@ -202,21 +202,21 @@ app.layout = html.Div([
                 value=DEFAULT_AREA,
                 clearable=False,
             ),
-        ], style={'flex': '1', 'min-width': '250px'}),
-    ], style={'display': 'flex', 'gap': '20px', 'flex-wrap': 'wrap', 'padding': '10px',
-              'font-family': FONT['family']}),
+        ], style={'flex': '1', 'minWidth': '250px'}),
+    ], style={'display': 'flex', 'gap': '20px', 'flexWrap': 'wrap', 'padding': '10px',
+              'fontFamily': FONT['family']}),
 
     html.Iframe(id='folium-map', width='100%', height='500px', style={'border': 'none'}),
 
     html.Div([
-        html.Div(dcc.Graph(id='education-chart'), style={'flex': '1', 'min-width': '350px'}),
-        html.Div(dcc.Graph(id='activity-chart'), style={'flex': '1', 'min-width': '350px'}),
-    ], style={'display': 'flex', 'gap': '10px', 'flex-wrap': 'wrap'}),
+        html.Div(dcc.Graph(id='education-chart'), style={'flex': '1', 'minWidth': '350px'}),
+        html.Div(dcc.Graph(id='activity-chart'), style={'flex': '1', 'minWidth': '350px'}),
+    ], style={'display': 'flex', 'gap': '10px', 'flexWrap': 'wrap'}),
 
     dcc.Graph(id='income-bar-chart'),
 
     html.P('Data: Statistics Finland, Paavo – open data by postal code area, 2022.',
-           style={'font-family': FONT['family'], 'font-size': '12px', 'color': '#777', 'padding': '0 10px'}),
+           style={'fontFamily': FONT['family'], 'fontSize': '12px', 'color': '#777', 'padding': '0 10px'}),
 ])
 
 
